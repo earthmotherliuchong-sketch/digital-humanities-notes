@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR时代文科生存与发展 — 浙大主旨演讲笔记</title>
+<meta property="og:title" content="AR时代文科生存与发展 — 浙大主旨演讲笔记" />
+<meta property="og:description" content="AI给文科开辟了第二赛道：从危机到赋能，从平台到工具，文科生的新出路全解析" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/ar-era/cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/ar-era/" />
+<style>
+:root {
+  --navy: #1a3a5c;
+  --orange: #e8783a;
+  --teal: #3a8c8c;
+  --red: #c0392b;
+  --cream: #fdf6ec;
+  --bg: #fefaf5;
+  --text: #2c2c2c;
+  --light-gray: #f5f0e8;
+  --border: #e0d5c5;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+
+/* Navigation */
+nav { position:sticky; top:0; background:var(--navy); z-index:100; padding:0 24px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+nav .inner { max-width:960px; margin:0 auto; display:flex; flex-wrap:wrap; gap:4px; padding:10px 0; }
+nav a { color:rgba(255,255,255,0.85); text-decoration:none; font-size:13px; padding:4px 10px; border-radius:4px; transition:all .2s; white-space:nowrap; }
+nav a:hover,nav a.active { background:var(--orange); color:#fff; }
+
+/* Hero */
+header { background:linear-gradient(135deg, var(--navy) 0%, #2a5a8c 50%, var(--teal) 100%); color:#fff; padding:60px 24px 50px; text-align:center; }
+header h1 { font-size:2em; margin-bottom:12px; letter-spacing:2px; }
+header .subtitle { font-size:1.05em; opacity:0.9; margin-bottom:20px; }
+header .meta { font-size:0.85em; opacity:0.65; }
+
+/* Main content */
+main { max-width:960px; margin:0 auto; padding:40px 24px 60px; }
+
+/* Section titles */
+h2 { font-size:1.5em; color:var(--navy); margin:48px 0 20px; padding-left:14px; border-left:4px solid var(--orange); }
+h3 { font-size:1.15em; color:var(--teal); margin:28px 0 12px; }
+
+/* Cards */
+.card { background:#fff; border-radius:10px; padding:24px 28px; margin:16px 0; box-shadow:var(--shadow); border-left:4px solid var(--orange); }
+.card.teal { border-left-color:var(--teal); }
+.card.navy { border-left-color:var(--navy); }
+.card.red { border-left-color:var(--red); }
+.card h4 { color:var(--navy); font-size:1.05em; margin-bottom:10px; }
+
+/* Highlight boxes */
+.highlight { background:var(--cream); border-radius:8px; padding:20px 24px; margin:16px 0; border:1px solid var(--border); position:relative; }
+.highlight::before { content:attr(data-icon); position:absolute; left:16px; top:14px; font-size:1.2em; }
+.highlight p { padding-left:28px; }
+.highlight strong { color:var(--orange); }
+
+/* Flow diagram */
+.flow { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:center; padding:20px 0; }
+.flow .step { background:var(--navy); color:#fff; padding:10px 18px; border-radius:20px; font-size:0.9em; text-align:center; min-width:80px; }
+.flow .arrow { color:var(--orange); font-size:1.3em; font-weight:bold; }
+
+/* Tables */
+table { width:100%; border-collapse:collapse; margin:16px 0; font-size:0.93em; }
+th { background:var(--navy); color:#fff; padding:12px 14px; text-align:left; font-weight:500; }
+td { padding:10px 14px; border-bottom:1px solid var(--border); }
+tr:nth-child(even) td { background:var(--light-gray); }
+
+/* Blockquote */
+blockquote { background:var(--light-gray); border-left:4px solid var(--teal); padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; font-style:italic; color:#555; }
+
+/* Two column */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:16px 0; }
+@media(max-width:640px) { .two-col{grid-template-columns:1fr;} }
+
+/* Warning box */
+.warning { background:#fff5f0; border:1px solid #f0c0a0; border-radius:8px; padding:16px 20px; margin:16px 0; }
+.warning strong { color:var(--red); }
+
+/* Summary banner */
+.summary-banner { background:linear-gradient(135deg,var(--navy),var(--teal)); color:#fff; border-radius:12px; padding:32px 28px; margin:48px 0 0; text-align:center; }
+.summary-banner h3 { color:#fff; margin-bottom:16px; font-size:1.3em; }
+.summary-banner .takeaways { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.summary-banner .takeaway { background:rgba(255,255,255,0.15); padding:8px 16px; border-radius:20px; font-size:0.93em; }
+
+/* Counters */
+.counter-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin:16px 0; }
+.counter { background:#fff; border-radius:10px; padding:20px; text-align:center; box-shadow:var(--shadow); }
+.counter .number { font-size:2em; font-weight:bold; color:var(--orange); }
+.counter .label { font-size:0.85em; color:#888; margin-top:4px; }
+
+/* TOC */
+.toc { background:#fff; border-radius:10px; padding:24px 28px; margin:24px 0; box-shadow:var(--shadow); }
+.toc h4 { color:var(--navy); margin-bottom:12px; }
+.toc ol { padding-left:20px; }
+.toc li { margin:6px 0; }
+.toc a { color:var(--teal); text-decoration:none; }
+.toc a:hover { color:var(--orange); }
+
+/* Footer */
+footer { text-align:center; padding:40px 24px; color:#999; font-size:0.85em; }
+footer a { color:var(--teal); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="#crisis">文科危机</a>
+    <a href="#empower">AI赋能</a>
+    <a href="#platforms">三大平台</a>
+    <a href="#tools">本地工具</a>
+    <a href="#talent">跨学科人才</a>
+    <a href="#career">就业新方向</a>
+    <a href="#skills">技能清单</a>
+    <a href="#summary">总结</a>
+  </div>
+</nav>
+
+<header>
+  <h1>AR时代文科生存与发展</h1>
+  <div class="subtitle">从危机到赋能 —— AI给文科开辟的第二赛道</div>
+  <div class="meta">🔊 数字人文论坛主旨演讲 · 浙大团队 · 阅读约 8 分钟</div>
+</header>
+
+<main>
+
+<!-- TOC -->
+<div class="toc">
+  <h4>📋 目录</h4>
+  <ol>
+    <li><a href="#crisis">文科的焦虑与危机</a></li>
+    <li><a href="#empower">AI/AR如何为文科赋能</a></li>
+    <li><a href="#platforms">浙大三大平台：从数据到知识</a></li>
+    <li><a href="#tools">本地AI工具：文科生的新武器</a></li>
+    <li><a href="#talent">跨学科人才：稀缺还是抢手</a></li>
+    <li><a href="#career">就业新方向：AR短剧与数据工程</a></li>
+    <li><a href="#skills">六项核心技能</a></li>
+    <li><a href="#summary">核心总结</a></li>
+  </ol>
+</div>
+
+<!-- Section 1: 文科危机 -->
+<h2 id="crisis">一、文科的焦虑与危机：这不是幻觉</h2>
+
+<div class="card red">
+  <h4>📉 全球性缩编浪潮</h4>
+  <p>哈佛大学率先缩减三十多门文科课程；复旦大学去年缩减文科招生比例，引发轩然大波。各高校纷纷减少文科课程、降低招生比例。外语专业首当其冲，已被边缘化，毕业生找工作非常困难。</p>
+</div>
+
+<div class="highlight" data-icon="💬">
+  <p><strong>现实案例：</strong>浙江财经大学中文专业，过去报名火爆，近两年开始明显下滑。文科老师、编辑普遍感到焦虑——很多论文已经是AI生成的，写得相当不错。</p>
+</div>
+
+<blockquote>
+「大家都在唱衰文科，确实我们也感到了非常大的压力。」但对于文科生来说，这不是终点——<strong>AI给文科开辟了第二赛道。</strong>
+</blockquote>
+
+<div class="card navy">
+  <h4>黄仁勋的判断</h4>
+  <p>「AI无法取代任何人百分之百的工作，但它将为50%的工作赋能。」他同时强调：<strong>必须拥抱AI、接触AI，不接触AI一定会被淘汰。</strong>大厂开始高薪招收懂AI的文科生——月薪三万以上。</p>
+</div>
+
+<!-- Section 2: AI赋能 -->
+<h2 id="empower">二、AI/AR如何为文科赋能：从文本到世界的重构</h2>
+
+<h3>全国范围内的AI+人文应用版图</h3>
+
+<table>
+  <tr><th>领域</th><th>代表机构与项目</th><th>核心能力</th></tr>
+  <tr><td>古文字识别</td><td>吉林大学</td><td>AI识别甲骨文、金文，准确率大幅提升</td></tr>
+  <tr><td>文献智能对合</td><td>浙江大学</td><td>将残碎文献通过AI复合复原</td></tr>
+  <tr><td>古籍智能化整理</td><td>北京大学、浙大</td><td>OCR+众包校对，四百五十亿字数据</td></tr>
+  <tr><td>古籍目录与知识组织</td><td>清华大学（唐宸博士）</td><td>中国典籍导览系统，一站式跳转海外资源</td></tr>
+  <tr><td>垂类大模型</td><td>浙大云事库、南京农大荀子模型、华中科大</td><td>文史垂类大模型，国内最大（450亿字）</td></tr>
+  <tr><td>历史地理重构</td><td>哈佛+复旦 CHGIS</td><td>时空知识重构，人物行迹图、分布图</td></tr>
+  <tr><td>非物质文化遗产</td><td>闽南方言×科大讯飞、杭州方言×阿里</td><td>方言↔普通话双向AI翻译，公益应用</td></tr>
+</table>
+
+<div class="card teal">
+  <h4>🏛️ 方言AI的公益价值</h4>
+  <p>闽南方言和杭州方言已实现AI化：方言输入→普通话输出，普通话输入→方言输出。这对<strong>公安破案</strong>非常有利——很多地方的嫌疑人讲方言听不懂，AI可以立刻识别出来。</p>
+</div>
+
+<h3>门槛大大降低：从编程到"会提问就行"</h3>
+
+<div class="highlight" data-icon="🔑">
+  <p><strong>重大转变：</strong>过去需要编程才能做的数据工作，现在用AI就可以。比如把古籍文本中的人名、字号、地名提取出来变成Excel表格——你只需要在本地电脑上对AI说一句话，它帮你搞定。<strong>不懂编程，会提问就行。</strong></p>
+</div>
+
+<!-- Section 3: 三大平台 -->
+<h2 id="platforms">三、浙大三大平台：从数字化到智能化</h2>
+
+<div class="two-col">
+  <div class="card navy">
+    <h4>1. 智慧古籍平台</h4>
+    <p>国家社科基金重大项目。后端覆盖完整流水线：PDF上传 → OCR识别 → 人工校对 → 标点校对 → 标题提取 → 标引审核 → 发布前台。前台功能包括著述导览、篇幅导览、作者导览、专题导览、人物关系导览、视频导览。</p>
+  </div>
+  <div class="card">
+    <h4>2. 云事库（文史大模型）</h4>
+    <p>国内最大文史垂类大模型：<strong>9万多种文献、450亿字数据</strong>，每周以1亿字递增。支持全文检索、知识问答、众包校对。论文辅助：给定题目和大纲即可生成两万字论文并带文献出处。</p>
+  </div>
+</div>
+
+<div class="card teal">
+  <h4>3. 云事库学术地图</h4>
+  <p>从数据地图平台升级而来。核心功能：</p>
+  <ul style="padding-left:20px; margin-top:8px;">
+    <li><strong>动态行迹图</strong>：上传Excel（人物+时间+地点+经纬度），自动生成动态行迹过程，每个点显示时间和事件</li>
+    <li><strong>AI问答切入</strong>：地图上直接提问「某人在某年某月在哪里见面」，AI即时回答</li>
+    <li><strong>区划探索</strong>：查询某地相关的所有地图、人物行迹</li>
+    <li><strong>时空综合查询</strong>：按年、月、区域检索所有相关地图数据</li>
+  </ul>
+  <p style="margin-top:10px; font-size:0.9em; color:#666;">正在进行：全国县级以下地名结构化定位——哈佛+复旦CHGIS只覆盖省府县三级，县以下地名需要从地方志中提取、定位、可视化，这是一个庞大的基础工程。</p>
+</div>
+
+<div class="warning">
+  <strong>⚠️ 通用大模型的缺陷：</strong>豆包生成的信息可能是虚构的——演讲者分享了一个亲身经历：豆包关于他的两条信息全部造假。专业文史大模型（如云事库）则有明确出处和脚注，避免了幻觉。特别提醒：<strong>不要把敏感文件上传到公有网通用大模型</strong>——机关单位的文件一旦泄露，后果严重。
+</div>
+
+<!-- Section 4: 本地工具 -->
+<h2 id="tools">四、本地AI工具：文科生的新式武器</h2>
+
+<div class="highlight" data-icon="💡">
+  <p><strong>如果你对AI的认识只停留在「用豆包提问」，那还太浅了。</strong>AI可以在本地做很多事情：文本提取变结构化数据、人名地名字号一键转Excel、文档处理、数据分析、深度研究、视频生成、幻灯片制作——全都可以在本地完成。</p>
+</div>
+
+<div class="flow" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; padding:10px 0;">
+  <span class="step">📄 PDF上传</span><span class="arrow">→</span>
+  <span class="step">🔤 OCR识别<br><small>横排98%<br>竖排95%+</small></span><span class="arrow">→</span>
+  <span class="step">📊 结构化<br><small>人名·地名<br>·字号·时间</small></span><span class="arrow">→</span>
+  <span class="step">💬 AI问答<br><small>有出处<br>有脚注</small></span><span class="arrow">→</span>
+  <span class="step">🎬 视频生成<br><small>AI漫剧</small></span>
+</div>
+
+<div class="card">
+  <h4>AI视频：让文言文活起来</h4>
+  <p>浙大团队做了大量实验：将古代典籍中的玉器、器物用AI生成视频。一段文言文通过AI视频实现后，给人印象极其深刻。古代浩如烟海的优秀典籍、作品、作者、甚至牧场都可以变成视频——<strong>光是古代文学作品要全部做成视频，就需要大量人力投入。</strong></p>
+  <p style="margin-top:8px; font-size:0.9em; color:#666;">九月中旬将举办AI漫剧培训班，教授用真人声音、容貌、故事剧本制作AI漫剧，面向全国招生。</p>
+</div>
+
+<!-- Section 5: 跨学科人才 -->
+<h2 id="talent">五、跨学科人才：从"找不到工作"到"抢着要"</h2>
+
+<div class="counter-grid">
+  <div class="counter"><div class="number">22</div><div class="label">位浙大学生获哈佛访问学者邀请</div></div>
+  <div class="counter"><div class="number">5千万</div><div class="label">浙大三大平台评估价</div></div>
+  <div class="counter"><div class="number">3万+</div><div class="label">大厂给AI+文科生月薪</div></div>
+</div>
+
+<table>
+  <tr><th>姓名</th><th>背景</th><th>成就</th></tr>
+  <tr><td>唐宸博士</td><td>上海大学本科·浙大博士</td><td>从安徽大学调入清华大学，计算机+人文复合背景</td></tr>
+  <tr><td>王宏书</td><td>上海大学硕士·申请时靠计算机技能</td><td>被哈佛CBDB团队招聘为项目经理</td></tr>
+  <tr><td>詹军</td><td>清华大学比较文学·自学计算机</td><td>百度高级工程师→硅谷→美国上市公司技术总监→回国创业</td></tr>
+  <tr><td>浙大某博士</td><td>传统文学+计算机</td><td>未毕业就被抢走，负责实验室，50万经费自由支配</td></tr>
+</table>
+
+<div class="warning">
+  <strong>⚠️ 残酷对比：</strong>浙大培养的纯传统专业博士，想在长三角找工作非常难——杭州博士毕业留不下来。但如果有传统文科底蕴+技术能力，<strong>企业抢着要。</strong>
+</div>
+
+<blockquote>
+「如果说你仅仅是一个传统专业，想在长三角找工作非常难。但是如果你有传统一流的素质加上技术，社会是非常缺乏的。」
+</blockquote>
+
+<div class="highlight" data-icon="📌">
+  <p><strong>关键判断：</strong>虽然数字人文本科已经设立，但第一批学生还没毕业，专硕都还没出现——<strong>高校极度缺乏跨学科人才</strong>，供需严重错配，能抓住窗口期的先行者将获得最大红利。</p>
+</div>
+
+<!-- Section 6: 就业 -->
+<h2 id="career">六、就业新方向：ARR给我们开了一扇窗</h2>
+
+<div class="two-col">
+  <div class="card orange" style="border-left-color:var(--orange)">
+    <h4>🎬 AI短剧与漫剧</h4>
+    <p>用真人声音、容貌、故事剧本组成的AI漫剧，当前抖音、视频号已经大量出现。不需要演员，不需要剧组——内容由文科生来创作。温州AI视频大赛一等奖<strong>奖金10万元</strong>，地方政府大力鼓励。</p>
+  </div>
+  <div class="card navy">
+    <h4>📚 古籍数字化工程</h4>
+    <p>现存古籍<strong>20-60万部</strong>，真正完成数字化、智能化的还很少。即使OCR准确率95%，剩下5%的校对工作量仍然巨大。县级以下地名结构化定位——需要几代人的努力。</p>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="card teal">
+    <h4>🏙️ 地方文旅赋能</h4>
+    <p>浙大正在将数据与机器人、视频结合，通过一体机触摸屏为地方文旅赋能。接入老年人陪伴机器人——具身机器人需要数据大脑才聪明，按马斯克预测机器人数量将超过人类，数据需求巨大。</p>
+  </div>
+  <div class="card">
+    <h4>✍️ AI辅助作文教学</h4>
+    <p>杭州公司推出的AI作文产品：语法纠错、金句标注、自动评分，与人工评分高度吻合。优秀作文自动选出汇集成册发表。</p>
+  </div>
+</div>
+
+<div class="highlight" data-icon="🔮">
+  <p><strong>长期机会：</strong>古籍数字化→结构化→智能化是一条漫长的路。地方志中县级以下地名、山川、亭台楼阁的结构化定位工作，庞大到需要几代人接力——这正是文科生的长期就业蓄水池。</p>
+</div>
+
+<!-- Section 7: 技能 -->
+<h2 id="skills">七、文科生必备六项核心技能</h2>
+
+<div class="flow" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+  <span class="step">① Python<br><small>编程语言</small></span><span class="arrow">→</span>
+  <span class="step">② 数据库<br><small>SQL</small></span><span class="arrow">→</span>
+  <span class="step">③ 函数应用<br><small>透视表/VLOOKUP</small></span><span class="arrow">→</span>
+  <span class="step">④ 空间分析<br><small>GIS/地图</small></span><span class="arrow">→</span>
+  <span class="step">⑤ 文本处理<br><small>NLP/标注</small></span><span class="arrow">→</span>
+  <span class="step">⑥ 可视化<br><small>图表/叙事</small></span>
+</div>
+
+<div class="card navy" style="margin-top:16px;">
+  <h4>在古人"义理、考据、辞章"之上，再加一个"算法"</h4>
+  <p>演讲者改编《周易》名句作为新文科学生的座右铭：</p>
+  <blockquote style="margin:12px 0 0;">
+    「关乎天文，以察时变；关乎人文，以化成天下。」<br>
+    ➡️ <strong>「关乎数理，以入虚拟之世界。」</strong>
+  </blockquote>
+</div>
+
+<!-- Section 8: 总结 -->
+<div class="summary-banner" id="summary">
+  <h3>🎯 核心总结</h3>
+  <p style="margin-bottom:18px; opacity:0.9;">「上帝关闭了一扇窗户，也为我们打开了另外一扇窗户。」</p>
+  <div class="takeaways">
+    <span class="takeaway">① 文科不消亡，但不拥抱AI会被淘汰</span>
+    <span class="takeaway">② AI给文科开辟了第二赛道</span>
+    <span class="takeaway">③ 本地AI工具让技术门槛降到「会提问就行」</span>
+    <span class="takeaway">④ 跨学科人才极度稀缺、极度抢手</span>
+    <span class="takeaway">⑤ 古籍结构化+AI短剧=文科生就业新蓝海</span>
+    <span class="takeaway">⑥ 六项技能：Python·数据库·函数·GIS·文本·可视化</span>
+    <span class="takeaway">⑦ 义理·考据·辞章 + 算法 = 新文科</span>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>📝 根据数字人文论坛主旨演讲录音整理 · 仅供学习参考</p>
+  <p>🏫 浙江大学出版社 · 智慧古籍平台 · 云事库 · 学术地图</p>
+</footer>
+
+</body>
+</html>

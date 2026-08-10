@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数字记忆的双轴 — 刘炜主旨演讲笔记</title>
+
+<!-- Open Graph / 微信分享卡片预览 -->
+<meta property="og:title" content="数字记忆的双轴 — 刘炜主旨演讲笔记">
+<meta property="og:description" content="文化遗产数智化的理论框架与实践：从三阶段跃迁到双轴模型，从四条命题到五维评价——刘炜研究员在中国数字人文年会上的主旨演讲完整笔记">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数字人文演讲笔记">
+<meta property="og:image" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/shuangzhou/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/shuangzhou/">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --orange: #e8783a;
+    --teal: #3a8c8c;
+    --red: #c0392b;
+    --cream: #fdf6ec;
+    --warm: #f5e6d3;
+    --light-teal: #e8f4f4;
+    --text: #2c2c2c;
+    --muted: #6b6b6b;
+    --border: #e0d5c7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.85;
+  }
+
+  /* ── Sticky Nav ── */
+  nav.sticky-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 4px; padding: 10px 16px;
+  }
+  nav.sticky-nav a {
+    text-decoration: none; color: var(--navy);
+    font-size: .85rem; padding: 5px 12px;
+    border-radius: 20px; transition: all .2s;
+    white-space: nowrap;
+  }
+  nav.sticky-nav a:hover { background: var(--light-teal); color: var(--teal); }
+
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c5f8a 100%);
+    color: #fff; padding: 48px 24px 40px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  header::after {
+    content: ''; position: absolute; bottom: -20px; left: 0; right: 0;
+    height: 40px; background: var(--cream); border-radius: 50% 50% 0 0;
+  }
+  header h1 { font-size: 2.2rem; letter-spacing: 2px; margin-bottom: 8px; }
+  header .subtitle { font-size: 1.05rem; opacity: .85; }
+  header .meta { margin-top: 12px; font-size: .85rem; opacity: .65; }
+
+  /* ── Container ── */
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Section ── */
+  section { margin: 36px 0; }
+  section h2 {
+    font-size: 1.55rem; color: var(--navy);
+    border-left: 4px solid var(--orange); padding-left: 14px; margin-bottom: 16px;
+  }
+  section h3 { font-size: 1.15rem; color: var(--teal); margin: 20px 0 10px; }
+
+  /* ── Card ── */
+  .card {
+    background: #fff; border-radius: 12px; padding: 22px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05); margin: 14px 0;
+    border-left: 3px solid var(--teal);
+  }
+  .card.highlight { border-left-color: var(--orange); background: #fffaf5; }
+  .card.warn { border-left-color: var(--red); background: #fef7f5; }
+  .card p, .card li { font-size: .95rem; line-height: 1.8; }
+
+  /* ── Quote ── */
+  .quote {
+    background: linear-gradient(135deg, var(--light-teal), #f0f8f8);
+    border-radius: 10px; padding: 20px 24px; margin: 16px 0;
+    font-style: italic; color: var(--navy); font-size: 1.05rem;
+    position: relative;
+  }
+  .quote::before { content: '"'; font-size: 3rem; color: var(--teal); opacity: .3; position: absolute; top: -8px; left: 10px; }
+  .quote .attr { display: block; text-align: right; font-style: normal; font-size: .85rem; color: var(--muted); margin-top: 8px; }
+
+  /* ── Flow ── */
+  .flow {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    justify-content: center; margin: 16px 0; font-size: .9rem;
+  }
+  .flow .step {
+    background: var(--navy); color: #fff; padding: 8px 16px;
+    border-radius: 24px; font-weight: 600; white-space: nowrap;
+  }
+  .flow .arrow { color: var(--orange); font-size: 1.2rem; font-weight: bold; }
+
+  /* ── Two-col ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* ── Table ── */
+  .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .9rem; }
+  .data-table th { background: var(--navy); color: #fff; padding: 10px 14px; text-align: left; }
+  .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .data-table tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+  /* ── Axis diagram ── */
+  .axis-diagram {
+    display: grid; grid-template-columns: 120px 1fr;
+    gap: 0; margin: 20px 0; font-size: .88rem;
+  }
+  .axis-diagram .axis-label {
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; padding: 12px 10px; writing-mode: vertical-rl;
+    color: #fff; border-radius: 8px 0 0 8px; letter-spacing: 2px;
+  }
+  .axis-diagram .prod { background: var(--navy); }
+  .axis-diagram .judge { background: var(--orange); }
+  .axis-diagram .axis-content {
+    background: #fff; border-radius: 0 8px 8px 0; padding: 14px 18px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    box-shadow: 0 1px 6px rgba(0,0,0,.04);
+  }
+  .axis-diagram .node {
+    background: var(--warm); padding: 6px 14px; border-radius: 20px;
+    font-weight: 600; color: var(--navy);
+  }
+  .axis-diagram .node.curate { background: #e8f4f4; }
+  .axis-diagram .node.viz { background: #fff3e0; }
+  .axis-diagram .node.narr { background: #fce4ec; }
+
+  /* ── Proposition cards ── */
+  .prop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+  @media (max-width: 640px) { .prop-grid { grid-template-columns: 1fr; } }
+  .prop-card {
+    background: #fff; border-radius: 10px; padding: 16px 18px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.04); border-top: 3px solid var(--orange);
+  }
+  .prop-card .num {
+    display: inline-block; background: var(--orange); color: #fff;
+    width: 26px; height: 26px; border-radius: 50%; text-align: center;
+    line-height: 26px; font-size: .8rem; font-weight: 700; margin-right: 8px;
+  }
+  .prop-card h4 { display: inline; font-size: 1rem; color: var(--navy); }
+  .prop-card p { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+
+  /* ── Badge ── */
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: .78rem; font-weight: 600; margin: 2px;
+  }
+  .badge-teal { background: var(--light-teal); color: var(--teal); }
+  .badge-orange { background: #fff3e0; color: var(--orange); }
+  .badge-red { background: #fef0ef; color: var(--red); }
+
+  /* ── List ── */
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; font-size: .93rem; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center; padding: 28px; color: var(--muted);
+    font-size: .82rem; border-top: 1px solid var(--border); margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <a href="#s0">开场</a>
+  <a href="#s1">三阶段</a>
+  <a href="#s2">桥梁定位</a>
+  <a href="#s3">双轴模型</a>
+  <a href="#s4">三条通路</a>
+  <a href="#s5">四条命题</a>
+  <a href="#s6">证据链</a>
+  <a href="#s7">五维评价</a>
+  <a href="#s8">本科教育</a>
+  <a href="#s9">教材思辨</a>
+</header>
+
+<header>
+  <h1>数字记忆的双轴</h1>
+  <div class="subtitle">文化遗产数智化的理论框架与实践</div>
+  <div class="meta">🎤 刘炜（上海图书馆 / 上海大学）&nbsp;|&nbsp;中国数字人文年会主旨演讲</div>
+</header>
+
+<div class="container">
+
+<!-- ── 0. 开场 ── -->
+<section id="s0">
+  <h2>开场 · 学科发展态势</h2>
+
+  <div class="card">
+    <p>中国数字人文年会自 2019 年在敦煌首届以来，每年举办，目前处于<strong>高速发展期</strong>。全国已有近 30 所本科院校开设数字人文专业，并成立了专业发展联盟。</p>
+  </div>
+
+  <div class="card highlight">
+    <h3>数字人文的学科身份之争</h3>
+    <p>刘炜指出一个关键矛盾：<strong>"现在有很多人不承认数字人文是个学科，特别是国外不承认，但是我们现在如果要把它当做一个学科在发展。"</strong></p>
+    <p>他的立场：数字人文应该建立<strong>学科的理论、方法和概论性体系</strong>，不能停留在"各个学科各说各话"的早期阶段。ADHO（国际数字人文组织联盟）因台湾已是其成员，中国暂时未能加入，但不妨碍国内推进。</p>
+  </div>
+</section>
+
+<!-- ── 1. 三阶段 ── -->
+<section id="s1">
+  <h2>一、从数字化到数智化：三个阶段的跃迁</h2>
+
+  <p>刘炜将文化遗产的数字化转型划分为三个本质不同的阶段，每个阶段回答不同层级的问题：</p>
+
+  <div class="data-table">
+    <tr>
+      <th style="width:14%">阶段</th>
+      <th style="width:22%">核心动作</th>
+      <th style="width:32%">回答的问题</th>
+      <th>关键判断</th>
+    </tr>
+    <tr>
+      <td><span class="badge badge-teal">数字化</span></td>
+      <td>物理对象 → 数字文件</td>
+      <td>文件是否完整清晰、可复制、可保存？</td>
+      <td>扫描 PDF 保留原始图像，仍是不可替代的证据</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-orange">数据化</span></td>
+      <td>依据研究问题识别属性、关系、时空</td>
+      <td>哪些名称不可定义？事件发生在何处？存在什么关系？</td>
+      <td>对象能够<strong>比较和计算</strong>，才说明材料进入知识结构</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-red">数智化</span></td>
+      <td>机器参与提出、发现、生成、交互</td>
+      <td>材料与关系是否<strong>可信</strong>？能否追溯？</td>
+      <td>技术越强，放大效应越明显——不能用一个漂亮界面掩盖上游数据问题</td>
+    </tr>
+  </div>
+
+  <div class="card warn">
+    <h3>⚠️ 三种失控</h3>
+    <ul>
+      <li><strong>数字化失真</strong>：材料残缺或图像模糊</li>
+      <li><strong>数据化失范</strong>：字段口径混乱、关系无来源</li>
+      <li><strong>数智化失控</strong>：生成结果看起来合理却无法追溯和证伪</li>
+    </ul>
+  </div>
+
+  <div class="quote">
+    真正的转换，发生在对象被建立关系、证据被检验、社会解释被完成之后——而不是在建模完成的那一刻。
+  </div>
+</section>
+
+<!-- ── 2. 桥梁定位 ── -->
+<section id="s2">
+  <h2>二、桥梁定位：数字人文本科教育的核心</h2>
+
+  <div class="card highlight">
+    <h3>核心洞察</h3>
+    <p>人文学者和技术人才之间"隔阂非常深"，双方"鸡同鸭讲"。刘炜认为——<strong>信息资源管理学科（信息组织、知识组织、策展）天然是这座桥梁</strong>。</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>数字人文本科的定位</h3>
+      <ul>
+        <li>属于文学门类、中国语言文学类</li>
+        <li>新文科核心交叉专业</li>
+        <li>培养<strong>复合应用型</strong>人才（非研究型）</li>
+        <li>落实国家文化数字化战略</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚠️ 不要搞成研究型</h3>
+      <ul>
+        <li>人文功底不是本科强项</li>
+        <li>技术功底也不是本科强项</li>
+        <li><strong>强项恰恰是"桥梁"</strong>——了解不同学科的话语体系，亲历实践项目</li>
+        <li>"正好是在学科衔接点发挥作用"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="quote">
+    数字人文本科培养的，恰恰是在学科衔接点发挥作用的人。<br>
+    <span class="attr">—— 这一定位直接决定了课程设计和评价方式</span>
+  </div>
+</section>
+
+<!-- ── 3. 双轴模型 ── -->
+<section id="s3">
+  <h2>三、核心理论：双轴模型</h2>
+
+  <p>这是刘炜在即将出版的《文化遗产理论方法与实践》中提出的核心理论框架——<strong>数字记忆的双轴</strong>，将知识生产过程分为两条并行的轴线：</p>
+
+  <div class="axis-diagram">
+    <div class="axis-label prod">生产层</div>
+    <div class="axis-content">
+      <span class="node curate">策管 · Curation</span>
+      <span style="color:var(--orange)">→</span>
+      <span class="node viz">可视化 · Visualization</span>
+      <span style="color:var(--orange)">→</span>
+      <span class="node narr">叙事 · Narrative</span>
+      <span style="margin-left:auto;font-size:.8rem;color:var(--muted)">被看见 → 被研究 → 被讲述</span>
+    </div>
+  </div>
+
+  <div class="axis-diagram">
+    <div class="axis-label judge">判断层</div>
+    <div class="axis-content">
+      <span>确认身份关系</span>
+      <span style="color:var(--orange)">·</span>
+      <span>核对证据</span>
+      <span style="color:var(--orange)">·</span>
+      <span>选择尺度</span>
+      <span style="color:var(--orange)">·</span>
+      <span>编码不确定性</span>
+      <span style="color:var(--orange)">·</span>
+      <span>核定事实与立场</span>
+      <span style="margin-left:auto;font-size:.8rem;color:var(--muted)">人在回路中</span>
+    </div>
+  </div>
+
+  <div class="card highlight">
+    <h3>人的判断贯穿每个环节</h3>
+    <ul>
+      <li><strong>对象识别</strong>：机器抽取名称 → 人判断同名异人/异名同人</li>
+      <li><strong>关系发现</strong>：机器生成候选联系 → 人核对证据</li>
+      <li><strong>可视化</strong>：工具生成图表 → 人选择尺度与编码不确定性</li>
+      <li><strong>叙事</strong>：模型起草摘要 → 人核定事实、立场和发挥边界</li>
+    </ul>
+    <p style="margin-top:10px;font-weight:600;">不要把"机器做图、人讲故事"当作简单的分工——判断必须贯穿每一个环节。</p>
+  </div>
+</section>
+
+<!-- ── 4. 三条通路 ── -->
+<section id="s4">
+  <h2>四、三条通路：策管 → 可视化 → 叙事</h2>
+
+  <p>文化遗产进入数智化空间，需经历三条非线性的通路，它们之间可以回溯和循环：</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>📦 上游 · 策管（Curation）</h3>
+      <p>给对象可靠的"身份证"</p>
+      <ul>
+        <li>稳定标识符、元数据</li>
+        <li>来源、版本、权属</li>
+        <li>匿名处理、敏感等级</li>
+        <li>长期保护策略</li>
+      </ul>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:6px;">策管不是后台杂物——它已经决定什么进入系统、以什么颗粒度进入、以及后续能做什么。</p>
+    </div>
+    <div class="card">
+      <h3>🗺️ 中游 · 可视化（Visualization）</h3>
+      <p>让对象在关系中获得位置</p>
+      <ul>
+        <li>通巢界面：把所有材料用图形方式展示</li>
+        <li>总览地图、网络和图像</li>
+        <li>帮助发现分布、聚类、异常</li>
+        <li>可视化不只是呈现结论——也帮助<strong>形成原本没有提出的问题</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>📖 下游 · 叙事（Narrative）</h3>
+      <p>让对象进入社会注意</p>
+      <ul>
+        <li>交代背景来源</li>
+        <li>区分事实/推测/争议</li>
+        <li>为不同受众提供不同入口</li>
+        <li><strong>缺席、不确定、冲突都应被保留</strong>——删掉它们等于牺牲真实</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <h3>⚠️ 警惕"流畅"的叙事</h3>
+      <p>"如果为了追求流畅，就会以牺牲真实为代价。"</p>
+      <p style="margin-top:6px;">一份研究成果可以面向学生（强调过程）、学术界（强调证据）和公众（强调问题）以不同方式呈现——但<strong>事实基础、争议状态和来源指向应保持一致</strong>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. 四条命题 ── -->
+<section id="s5">
+  <h2>五、四条可检验的命题</h2>
+
+  <p>这些命题将理论框架"转化为可以讨论、可以被检验的议题"，本质上是建设数字人文基础设施时的<strong>四个警觉原则</strong>：</p>
+
+  <div class="prop-grid">
+    <div class="prop-card">
+      <span class="num">1</span><h4>通巢界面假说</h4>
+      <p>把所有资料用流或图形方式展示（如数百万条馆藏），能促进长尾发现，但也可能制造导向性偏差——视觉上醒目的对象可能垄断注意力。</p>
+    </div>
+    <div class="prop-card">
+      <span class="num">2</span><h4>判断层永远是稀缺的</h4>
+      <p>机器可以批量生成候选，但最终判断——这个关系对不对、这条证据强不强、这个标注信不信——永远是稀缺资源。研究人员必须时刻"带好"判断。</p>
+    </div>
+    <div class="prop-card">
+      <span class="num">3</span><h4>数据地基的边界</h4>
+      <p>每个数据集的字段定义、值域规则、空缺处理方式都限定了后续能提什么问题。"字段不求多，但每一列都要有定义、值域和空缺的规则。"</p>
+    </div>
+    <div class="prop-card">
+      <span class="num">4</span><h4>上游约束下游</h4>
+      <p>地基不可靠，后面的图和故事只会把问题进一步放大。理想状况：分析从结构化数据出发，任何结论都能够返回原文的页码和版本。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. 证据链 ── -->
+<section id="s6">
+  <h2>六、可信数字记忆：证据链 + 责任链</h2>
+
+  <div class="card highlight">
+    <h3>两条必须闭环的链条</h3>
+    <div class="two-col">
+      <div>
+        <h4>🔗 证据链（Evidence Chain）</h4>
+        <p>从文献 → 数据 → 本体 → 数智化平台，每一步可追溯：某个结论来自哪条原文？OCR 识别置信度多少？谁做的标注？什么时间、依据什么规则？</p>
+      </div>
+      <div>
+        <h4>👤 责任链（Responsibility Chain）</h4>
+        <p>某个认定来自哪位专家？如果某个 OCR 结果是"徐永明教授合作"的，出了错他就要承担责任——当然这是比较理想化的状态，但方向必须明确。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>以淮安方志为例</h3>
+    <p>刘炜以一个具体项目展示可信数字记忆的含义：研究某条水系在不同时期如何影响聚落、交通和地方政治。平台需要支持：</p>
+    <ul>
+      <li>界定问题 → 确定数据单元（水道、地点、时间段、事件、人物）→ 最小数据集（标识、地名、时间、关系、出处、证据状态、版本）</li>
+      <li>OCR + NER 抽取 → 大模型生成候选 → <strong>人工核检</strong> → 无法确认的保留并记录理由</li>
+      <li>历史地名可能只有范围、多个候选坐标可能随时代变化——<strong>材料缺失不能被固化</strong></li>
+      <li>可视化时，不确定性应被明确标注——"约""待考"不能压入确定的点线中</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── 7. 五维评价 ── -->
+<section id="s7">
+  <h2>七、五维评价标尺</h2>
+
+  <p>刘炜提出了一套不再以"访问量"或"论文发表"为唯一标准的评价体系：</p>
+
+  <div class="data-table">
+    <tr><th>维度</th><th>评价标准</th></tr>
+    <tr><td>① 数据可信</td><td>数据是否有来源、版本和口径定义？</td></tr>
+    <tr><td>② 分析可溯</td><td>分析和叙事是否能返回原始证据？</td></tr>
+    <tr><td>③ 不确定可见</td><td>不确定性、缺席和争议是否被表达，而非被压制？</td></tr>
+    <tr><td>④ 权利参与</td><td>权利人、相关社群是否参与了公开边界和叙事方式的确定？</td></tr>
+    <tr><td>⑤ 可持续</td><td>数据、文档和系统是否可维护、可迁移、可复用？</td></tr>
+  </div>
+
+  <div class="quote">
+    访问量只能说明传播范围，不能独自证明理解的发生。<br>
+    <span class="attr">数字人文的成果不光是论文——数据、数据集、模型、工作过程都应成为可引用、可复用的学术产品。</span>
+  </div>
+</section>
+
+<!-- ── 8. 本科教育 ── -->
+<section id="s8">
+  <h2>八、本科教育的四个维度</h2>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>📚 四大支柱</h3>
+      <ul>
+        <li><strong>人文基础</strong>：文史功底不可放弃</li>
+        <li><strong>数字方法</strong>：技术工具的实操能力</li>
+        <li><strong>文化遗产</strong>：领域知识与问题意识</li>
+        <li><strong>产教融合</strong>：面向产业的实际项目</li>
+      </ul>
+    </div>
+    <div class="card highlight">
+      <h3>🎯 最根本的任务</h3>
+      <p>塑造数字人文作为一个学科的<strong>理论基础</strong>——它的边界、概念体系和方法论框架——才能把四个方面串联在一起。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>教学实践建议</h3>
+    <ul>
+      <li>让学生交付<strong>每一阶段的中间成果</strong>，而不只是最终论文</li>
+      <li>建模位于比较与分析之间——模型既来自已有问题，也规定后续能提出什么新问题</li>
+      <li>每个实验都应返回<strong>研究问题、证据依据和解释框架</strong>，而不是"仅仅会操作"</li>
+      <li>"目前最重视的还是技术，因为缺技术——但只知道怎么做，不知道为什么要做，这是一个问题"</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── 9. 教材思辨 ── -->
+<section id="s9">
+  <h2>九、教材现况与批判</h2>
+
+  <p>刘炜将现有数字人文教材分为五种类型，并逐一评析，坦率而犀利：</p>
+
+  <div class="data-table">
+    <tr><th>类型</th><th>代表</th><th>刘炜的评价</th></tr>
+    <tr>
+      <td>读本型</td>
+      <td>国外论文/博客翻译合集</td>
+      <td>"论文深浅不一，判断价值、意识形态和学科传统都是西方的——会有点问题"</td>
+    </tr>
+    <tr>
+      <td>综合新编型</td>
+      <td>海外讨论 + 国内实践</td>
+      <td>"各方面不太统一，用也可以用，但还不是最好的"</td>
+    </tr>
+    <tr>
+      <td>批判型</td>
+      <td>文学批判视角</td>
+      <td>提供了不同角度，但覆盖面窄</td>
+    </tr>
+    <tr>
+      <td>入门型</td>
+      <td>Melissa Terras《数字人文导论》</td>
+      <td>"系统性比较好，但比较初级"——英国作为学科教材的入门书</td>
+    </tr>
+    <tr>
+      <td>综合实验型</td>
+      <td>刘炜团队的新书</td>
+      <td>"适合作为理论方法和应用技术全面覆盖的实验导向教材"——期望成为主教材、提供稳定坐标</td>
+    </tr>
+  </div>
+
+  <div class="card">
+    <h3>主教材 vs 参考书</h3>
+    <p>刘炜认为：<strong>主教材应提供稳定坐标</strong>（理论、方法、应用全面覆盖），参考书应扩展视野。目前各本科院校可以自行配置，但"我们还需要更好的教材"。</p>
+    <p style="margin-top:8px;">实验材料应不断更新，使用"现的发展开版经典读本的一篇博客的争论"——远程阅读（Distant Reading）的提出者 Moretti 到中国做了一次报告后，自己推翻了大家按照他的理论做出的诠释，"有点像嬉皮士一样"。这个例子说明：数字人文领域的方法论共识仍在形成中。</p>
+  </div>
+</section>
+
+<!-- ── 记忆理论 ── -->
+<section id="s10">
+  <h2>理论基础：四个记忆理论</h2>
+
+  <p>刘炜的双轴模型建立在对西方记忆理论的吸收之上，选择性地引入四条关键理论：</p>
+
+  <div class="data-table">
+    <tr><th style="width:16%">理论家</th><th>核心观点</th><th>对双轴模型的启发</th></tr>
+    <tr>
+      <td>哈布瓦赫<br><span style="font-size:.78rem;color:var(--muted)">Halbwachs</span></td>
+      <td>个人记忆依赖于社会框架；不同民族文化下记忆不同</td>
+      <td>理解记忆需要站在特定社会框架内——数据标注不能脱离语境</td>
+    </tr>
+    <tr>
+      <td>扬·阿斯曼<br><span style="font-size:.78rem;color:var(--muted)">Jan Assmann</span></td>
+      <td>文化记忆需要文字、仪式和建筑作为媒介</td>
+      <td>数字平台是当代的"文化记忆媒介"</td>
+    </tr>
+    <tr>
+      <td>阿莱达·阿斯曼<br><span style="font-size:.78rem;color:var(--muted)">Aleida Assmann</span></td>
+      <td>区分存储记忆与功能记忆；材料只有进入现实使用才能获得活性</td>
+      <td>对应双轴中"从被看见到被讲述"——激活存储记忆为功能记忆</td>
+    </tr>
+    <tr>
+      <td>诺拉 & 德里达<br><span style="font-size:.78rem;color:var(--muted)">Nora & Derrida</span></td>
+      <td>保存、分类和访问背后存在权力——你为什么这样分类？遮蔽了什么？</td>
+      <td>分类口径和默认界面承载受托责任——知情同意和社群权利必须协调</td>
+    </tr>
+  </div>
+
+  <div class="quote">
+    数字技术改变了记忆的载体，却没有取消选择的权利。<br>
+    <span class="attr">—— 这些记忆理论应成为数字人文学科的基础理论</span>
+  </div>
+</section>
+
+<!-- ── 总结 ── -->
+<section>
+  <h2>总结 · 贯穿全场的核心思想</h2>
+
+  <div class="card highlight">
+    <h3>一个公式</h3>
+    <p style="font-size:1.15rem;text-align:center;font-weight:700;color:var(--navy);margin:12px 0;">数字人文 = 数据库 × 方法<br><span style="font-size:.85rem;font-weight:400;">（像阴阳八卦一样，两者同等重要、互相驱动）</span></p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>🎯 五个关键主张</h3>
+      <ol>
+        <li>问题先于工具——软件不会自动产生值得研究的问题</li>
+        <li>建模位于问题与方法之间——模型来自问题，也限定了后续能问什么</li>
+        <li>生产层与判断层不可混为一谈——人的判断是稀缺的核心资源</li>
+        <li>证据链 + 责任链必须闭环——可信数字记忆的基础</li>
+        <li>数字人文成果不止论文——数据、模型、工作过程都应可引用、可复用</li>
+      </ol>
+    </div>
+    <div class="card warn">
+      <h3>⚠️ 三个不要</h3>
+      <ol>
+        <li>不要用一个漂亮界面掩盖上游数据问题</li>
+        <li>不要用模型置信度替代真正的矢实转换</li>
+        <li>不要把本科教育搞成研究型——桥梁才是核心定位</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="quote" style="text-align:center;">
+    "模型可以输出流畅的答案，却不能单独承担博物馆、档案馆或图书馆发布错误信息的后果。"<br>
+    <span class="attr">能否生成正在快速变成"是否容易"——谁来认定、依据什么认定、谁承担后果，反而成为公共知识的核心问题。</span>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  📝 本笔记根据刘炜研究员在中国数字人文年会上的主旨演讲录音整理 · 仅供学习参考<br>
+  演讲标题：数字记忆的双轴——文化遗产数智化的理论框架与实践
+</footer>
+
+</body>
+</html>

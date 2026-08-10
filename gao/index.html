@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数字人文的界定与实践 — 主旨演讲精华笔记</title>
+
+<!-- Open Graph / 微信分享卡片预览 -->
+<meta property="og:title" content="数字人文的界定与实践 — 高老师主旨演讲笔记">
+<meta property="og:description" content="用数字技术解决人文问题，以人文的方式发展数字技术——从核心定义到五步研究法，从阴阳哲学到三把钥匙，一场跨学科方法论革命的完整笔记">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/gao/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/gao/">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --orange: #e8783a;
+    --teal: #3a8c8c;
+    --red: #c0392b;
+    --cream: #fdf6ec;
+    --warm: #f5e6d3;
+    --light-teal: #e8f4f4;
+    --text: #2c2c2c;
+    --muted: #6b6b6b;
+    --border: #e0d5c7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c5f8a 100%);
+    color: #fff;
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0; right: 0;
+    height: 40px;
+    background: var(--cream);
+    border-radius: 50% 50% 0 0;
+  }
+  header h1 {
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    font-weight: 300;
+  }
+  header .meta {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    overflow-x: auto;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 4px;
+  }
+  nav a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  nav a:hover, nav a.active {
+    border-bottom-color: var(--orange);
+    color: var(--orange);
+  }
+
+  /* ── Main Container ── */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+  }
+
+  /* ── Section ── */
+  section {
+    margin-bottom: 48px;
+    scroll-margin-top: 70px;
+  }
+  .section-badge {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  section h2 {
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--orange);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section h2 .emoji {
+    font-size: 1.5rem;
+  }
+  section h3 {
+    font-size: 1.15rem;
+    color: var(--teal);
+    margin: 20px 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid var(--teal);
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .card.accent-orange { border-left: 5px solid var(--orange); }
+  .card.accent-teal   { border-left: 5px solid var(--teal); }
+  .card.accent-red    { border-left: 5px solid var(--red); }
+  .card.accent-navy   { border-left: 5px solid var(--navy); }
+
+  /* ── Highlight Box ── */
+  .highlight {
+    background: var(--warm);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-size: 1.05rem;
+    position: relative;
+  }
+  .highlight::before {
+    content: '💡';
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    font-size: 1.5rem;
+  }
+  .highlight.core {
+    background: linear-gradient(135deg, #e8f4f4, #d4eaea);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    padding: 24px;
+  }
+  .highlight.core::before { content: '🎯'; }
+
+  /* ── Flow Chart ── */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  .flow-step {
+    background: #fff;
+    border: 2px solid var(--teal);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 100px;
+    position: relative;
+  }
+  .flow-step.warn {
+    border-color: var(--red);
+    background: #fef5f5;
+  }
+  .flow-step .step-num {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+  .flow-step.warn .step-num { color: var(--red); }
+  .flow-step .step-note {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .flow-arrow {
+    font-size: 1.2rem;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* ── Layer Diagram ── */
+  .layers {
+    max-width: 420px;
+    margin: 16px auto;
+  }
+  .layer {
+    padding: 12px 16px;
+    margin: 4px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .layer.l1 { background: #d4e6f1; color: #1a5276; width: 70%; margin-left: 15%; }
+  .layer.l2 { background: #a9cce3; color: #1a5276; width: 80%; margin-left: 10%; }
+  .layer.l3 { background: var(--red); color: #fff; width: 92%; margin-left: 4%; font-size: 1rem; }
+  .layer.l4 { background: #d5f5e3; color: #1e8449; width: 84%; margin-left: 8%; }
+  .layer.l5 { background: #fdebd0; color: #7d6608; width: 74%; margin-left: 13%; }
+
+  /* ── Dumbbell ── */
+  .dumbbell {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 24px auto;
+    max-width: 600px;
+  }
+  .dumbbell .ball {
+    background: #d5f5e3;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    border: 3px solid #27ae60;
+  }
+  .dumbbell .bar {
+    flex: 1;
+    height: 8px;
+    background: var(--red);
+    border-radius: 4px;
+    position: relative;
+  }
+  .dumbbell .bar::after {
+    content: '知识生产 ❌ 短板';
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
+  /* ── Yin Yang ── */
+  .yinyang-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin: 16px 0;
+  }
+  .yinyang-side {
+    flex: 1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .yinyang-side.yang {
+    background: linear-gradient(135deg, #d4e6f1, #a9cce3);
+    border: 2px solid #2980b9;
+  }
+  .yinyang-side.yin {
+    background: linear-gradient(135deg, #fdebd0, #f5cba7);
+    border: 2px solid #e67e22;
+  }
+  .yinyang-side .label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .yinyang-side.yang .label { color: #1a5276; }
+  .yinyang-side.yin .label { color: #a04000; }
+  .yinyang-side .desc {
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  .yinyang-center {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--muted);
+  }
+  .yinyang-quote {
+    text-align: center;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+
+  /* ── Keys ── */
+  .keys-row {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .key-card {
+    flex: 1;
+    min-width: 120px;
+    background: #fff;
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .key-card .key-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .key-card .key-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .key-card .key-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* ── Case Grid ── */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .case-item {
+    background: var(--light-teal);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+  .case-item .case-icon {
+    font-size: 1.3rem;
+    margin-right: 6px;
+  }
+
+  /* ── Table ── */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.9rem;
+  }
+  .info-table th, .info-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  .info-table th {
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+  }
+  .info-table tr:nth-child(even) { background: #faf8f5; }
+
+  /* ── Quote ── */
+  blockquote {
+    background: #fff;
+    border-left: 4px solid var(--orange);
+    margin: 16px 0;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #555;
+  }
+  blockquote .author {
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--muted);
+  }
+
+  /* ── Summary Banner ── */
+  .summary-banner {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .summary-banner h2 {
+    color: #fff;
+    border-bottom-color: var(--orange);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .summary-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .summary-flow span {
+    background: rgba(255,255,255,0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .summary-flow .arrow {
+    background: none;
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  /* ── Warning / Tip ── */
+  .warning-badge {
+    display: inline-block;
+    background: #fdedec;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin: 0 4px;
+  }
+
+  /* ── Tag cloud ── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  .tag {
+    background: var(--warm);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    text-align: center;
+    color: var(--border);
+    font-size: 1.5rem;
+    margin: 32px 0;
+    letter-spacing: 12px;
+  }
+
+  /* ── Two Column ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .two-col { grid-template-columns: 1fr; }
+    header h1 { font-size: 1.6rem; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+    .yinyang-row { flex-direction: column; }
+    .dumbbell { flex-direction: column; }
+    .dumbbell .bar { width: 8px; height: 40px; }
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>数字人文的界定与实践</h1>
+  <p class="subtitle">主旨演讲精华笔记 · 给错过讲座的你</p>
+  <div class="meta">
+    <span>📅 数字人文论坛主旨演讲</span>
+    <span>🎤 高老师（南京农业大学）</span>
+    <span>⏱️ 阅读约 10 分钟</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#s1">一、核心定义</a></li>
+    <li><a href="#s2">二、五步研究法</a></li>
+    <li><a href="#s3">三、五层架构</a></li>
+    <li><a href="#s4">四、阴阳哲学</a></li>
+    <li><a href="#s5">五、物产研究案例</a></li>
+    <li><a href="#s6">六、学科与教育</a></li>
+    <li><a href="#s7">七、总结</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ═══════════ SECTION 1 ═══════════ -->
+<section id="s1">
+  <span class="section-badge">PART 1</span>
+  <h2><span class="emoji">📖</span> 什么是数字人文？</h2>
+
+  <div class="highlight core">
+    「用数字技术解决人文问题，以人文的方式发展数字技术」
+  </div>
+
+  <div class="card accent-navy">
+    <h3>人文学科的本质</h3>
+    <p>人文学科的核心是<strong>批判性和思辨性研究</strong>，具有强烈的历史要素。它通过观察、分析和批判来判断人的<strong>情感、道德和理智</strong>——区别于神、区别于动物、区别于工具。</p>
+    <p style="margin-top:8px;">其他技术方法、科学方法不包含的都在人文里面；甚至现在技术方法、科学方法也可以涵盖在人文中。尤其在 AI 时代，如何重新定义人文学科至关重要。</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card accent-red">
+      <h3>❌ 这两类不算数字人文</h3>
+      <ul style="padding-left:20px; margin-top:8px;">
+        <li style="margin-bottom:10px;"><strong>不具有人文性的研究</strong>——算法本身没有意义，必须结合<strong>人的理论</strong>，对数据做人文解读，分析数据背后的人文信息和情感，深入到人文与历史的脉络中去。</li>
+        <li><strong>轻易能够完成的也不能算</strong>——人文学者需要体会到数据清洗、模型构建、实验设计的复杂性；计算机学者也需要体会到语料阅读和精细数据解读的深度。</li>
+      </ul>
+    </div>
+
+    <div class="card accent-teal">
+      <h3>✅ 数字人文 = 闭环研究</h3>
+      <p>对研究问题进行<strong>数学建模</strong>，利用智能方法与程序来<strong>获取数据、处理数据、实验检测数据、解读阐释数据</strong>，进而<strong>回应当初提出的研究问题</strong>。</p>
+      <p style="margin-top:8px; padding:10px; background:var(--light-teal); border-radius:8px;">
+        <strong>关键：</strong>问题由人文学者提出，数据跑一圈，最后还是由人文学者来回答。或者，这两者交叉融合在一起完成闭环。
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>关于定义的争议</h3>
+    <p>数字人文到底是什么？<strong>至今没有精确、统一的定义。</strong></p>
+    <div class="tags">
+      <span class="tag">一种方法论</span>
+      <span class="tag">一个交叉学科</span>
+      <span class="tag">新型学术组织与模式</span>
+      <span class="tag">多种实践范式</span>
+      <span class="tag">第五范式（人机交互）</span>
+    </div>
+    <p style="margin-top:12px; color:var(--muted); font-size:0.9rem;">
+      尼采说：「没有事实，只有视角。」从不同学科、不同视角来看，说法不一。但<strong>底层的方法论是相似的</strong>。尽管定义争议不断，数字人文随着科技发展处于不断变化中，在迭代中探索和改写自己的边界——这是不争的事实。
+    </p>
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 2 ═══════════ -->
+<section id="s2">
+  <span class="section-badge">PART 2</span>
+  <h2><span class="emoji">🔬</span> 数字人文研究五步法</h2>
+
+  <div class="card">
+    <div class="flow">
+      <div class="flow-step">
+        <span class="step-num">①</span>明确科学问题
+        <span class="step-note">最重要！不能"为了做研究而做研究"</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step warn">
+        <span class="step-num">②</span>数据清洗·标注·定义
+        <span class="step-note">⚠️ 最被忽视的短板</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="step-num">③</span>选择方法·实验
+        <span class="step-note">定性/定量/社会网络/GIS/知识图谱</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="step-num">④</span>结果验证·解读
+        <span class="step-note">🔁 可重复验证（闭环）</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="step-num">⑤</span>知识产出·传播
+        <span class="step-note">→ 循环回到 ①</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card accent-red">
+      <h3>第 ① 步：领域需求与科学问题 <span class="warning-badge">最容易被跳过</span></h3>
+      <p>「很多年轻学生拿来数据就一通跑，但不知道自己要什么——这非常要命。必须先搞清楚<strong>领域需求和科学问题</strong>，要大量阅读、大量思考。」</p>
+    </div>
+    <div class="card accent-red">
+      <h3>第 ② 步：数据标注 <span class="warning-badge">最深的水</span></h3>
+      <p>数据要数字化、清洗、标注、定义。大模型出错，十有八九是<strong>标注不够深入、不够专业</strong>，对数据的定义不够精准。此外还需格式化和语料库建设。</p>
+    </div>
+  </div>
+
+  <div class="card accent-teal">
+    <h3>第 ④ 步：可重复验证 —— 与传统人文最大的不同</h3>
+    <p>海外高端期刊发表数字人文论文，会要求你<strong>开放实验数据</strong>：数据从哪来、怎么建模、怎么定义的、准确率怎么样。<strong>实验要经得住他人复现验证。</strong>这是做数字人文跟传统人文研究在方法论上最大的区别。</p>
+  </div>
+
+  <div class="highlight">
+    <strong>五个步骤形成一个闭环：</strong>从人文学者提出问题开始，经过数据建模与实验，最后回到人文学者手中进行解读。数据不能成为「单纯的数据点」——从文本记载转化为数据再进一步成为知识的过程中，那些记载信息文字背后曾存在怎样的含义、如何产生、如何流传、以何种方式被解读和使用，是数字人文学界<strong>必须时刻追问</strong>的问题。
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 3 ═══════════ -->
+<section id="s3">
+  <span class="section-badge">PART 3</span>
+  <h2><span class="emoji">🏗️</span> 五层架构与当前短板</h2>
+
+  <div class="card">
+    <div class="layers">
+      <div class="layer l5">🌍 社会关照</div>
+      <div class="layer l4">📤 知识生产</div>
+      <div class="layer l3">🔄 循环实验层（可反复验证）</div>
+      <div class="layer l2">🔗 匹配层</div>
+      <div class="layer l1">🪨 支撑层</div>
+    </div>
+    <p style="text-align:center; margin-top:12px; font-size:0.88rem; color:var(--muted);">
+      中间的红色循环层是可反复实验验证的核心——一个问题对一个问题，螺旋式解决科学问题和社会关照问题。
+    </p>
+  </div>
+
+  <div class="card accent-red">
+    <h3>一个形象的「哑铃」：两头重，中间空</h3>
+    <div class="dumbbell">
+      <div class="ball">前端<br>✅ 做得好<br><small>数字化基础<br>数据库·平台</small></div>
+      <div class="bar"></div>
+      <div class="ball">终端<br>✅ 做得好<br><small>传播展示<br>可视化·出版</small></div>
+    </div>
+    <p style="text-align:center; margin-top:16px; color:var(--red); font-weight:600;">
+      数字基础设施持续精进，数据传播和智能展示成绩斐然。<br>
+      但中间的数字赋能研究——<strong>知识生产这个环节，依然有大量问题待解决。</strong>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>范式正在切换中</h3>
+    <blockquote>
+      「思想和科学的进步是由新范式代替旧范式所构成的。当旧的范式变得日益不能解释新的事实的时候，能用更加令人满意的方法来说明那些事实的新范式就取代了它。」
+      <span class="author">—— 托马斯·库恩</span>
+    </blockquote>
+    <p>数字基础设施、垂直领域大模型、多层多粒度的知识标注……这些都在推动着范式的更替。</p>
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 4 ═══════════ -->
+<section id="s4">
+  <span class="section-badge">PART 4</span>
+  <h2><span class="emoji">☯️</span> 阴阳哲学</h2>
+
+  <div class="yinyang-row">
+    <div class="yinyang-side yang">
+      <div class="label">☀️ 阳</div>
+      <div class="desc">
+        <strong>技术 · 方法 · 数据</strong><br><br>
+        方舟木材知识组织的技术方法<br>
+        过程的自然属性（生物学角度）<br>
+        量化研究、模型与算法
+      </div>
+    </div>
+    <div class="yinyang-center">⇄</div>
+    <div class="yinyang-side yin">
+      <div class="label">🌙 阴</div>
+      <div class="desc">
+        <strong>人文 · 意义 · 伦理</strong><br><br>
+        物产与自然、社会发展的关系<br>
+        知识重组与人文解释<br>
+        讲好中国故事、传承中国文化
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <blockquote>
+      「从实验室到博物馆，知识经历了探知与发现，经历了科学的阳和人文主义的阴。阳给了我们力量，阴提供了意义和伦理的判断。」
+      <span class="author">—— 引自《未来简史》，演讲者借用</span>
+    </blockquote>
+    <p style="text-align:center; color:var(--navy); font-weight:600; margin-top:12px;">
+      阳给力量，阴给方向。缺了技术则无力，缺了人文则走偏。
+    </p>
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 5 ═══════════ -->
+<section id="s5">
+  <span class="section-badge">PART 5</span>
+  <h2><span class="emoji">🔑</span> 核心案例：物产研究</h2>
+
+  <div class="card accent-navy">
+    <h3>研究起点：地方志中的物产记载</h3>
+    <p>地方志是中国独有的、<strong>近千年持续不断</strong>的对地方物产的记载。从宋代开始体例定型，每个地方都有一个「物产」「土贡」或「方物」专栏。</p>
+    <div class="highlight" style="margin-top:16px;">
+      「一方水土生一方物产，一方物产养一方人」
+    </div>
+    <p>演讲团队从 2008 年开始，历经近二十年，从最初的<strong>7,532 种手抄地方物产</strong>，扩展到<strong>9,000 多种地方志</strong>的数字化，涵盖正史、农书、本草、名人笔记、诗词歌赋等多种文献。</p>
+  </div>
+
+  <div class="card accent-orange">
+    <h3>解构文献的三把钥匙</h3>
+    <div class="keys-row">
+      <div class="key-card">
+        <div class="key-icon">🏷️</div>
+        <div class="key-title">名称</div>
+        <div class="key-desc">同物异名、异物同名<br>名称与民俗文化深度关联<br>需要深厚文史功底考证</div>
+      </div>
+      <div class="key-card">
+        <div class="key-icon">🕐</div>
+        <div class="key-title">时间</div>
+        <div class="key-desc">地方志「越境不书」<br>时空变迁清晰可追溯<br>物种消长考证</div>
+      </div>
+      <div class="key-card">
+        <div class="key-icon">📍</div>
+        <div class="key-title">空间</div>
+        <div class="key-desc">物种分布与传播路线<br>自然与人工的选择<br>区域性生态多样性</div>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:0.88rem; color:var(--muted); margin-top:12px;">
+      这三个要素是<strong>最基础性</strong>的。不管研究什么物产、人物、文本，从这三个维度切入，科学问题就出来了。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>经典案例</h3>
+    <div class="case-grid">
+      <div class="case-item">
+        <span class="case-icon">🗺️</span><strong>苏东坡行走轨迹</strong><br>以时间地点数据还原苏东坡生平——他是唐宋诗词人物中已知行走最长的人，轨迹图在网络上广为流传。
+      </div>
+      <div class="case-item">
+        <span class="case-icon">🥔</span><strong>马铃薯在中国传播</strong><br>明末清初从美洲传入，可以画出精确的传播路线图和时间线。
+      </div>
+      <div class="case-item">
+        <span class="case-icon">🐟</span><strong>江苏 = 鱼米之乡</strong><br>用数据证明：「江苏的物产排在第一个就是鱼」。不是去印证说法，而是数据自然呈现的结果。
+      </div>
+      <div class="case-item">
+        <span class="case-icon">🍈</span><strong>「莼鲈之思」的深意</strong><br>表面是西晋张翰思念家乡美食，实质是看透八王之乱的政治局势想逃离官场——计算机读不出这层含义，需要深厚的人文解读。
+      </div>
+    </div>
+  </div>
+
+  <div class="card accent-teal">
+    <h3>从数据到科学问题</h3>
+    <ul style="padding-left:20px;">
+      <li style="margin-bottom:6px;">数据定义的<strong>精准性和科学性</strong>——有没有达到万分之三的差错率？</li>
+      <li style="margin-bottom:6px;">古籍文献、考古发现、生物实验的<strong>多学科协作</strong></li>
+      <li style="margin-bottom:6px;">量化物产与自然的<strong>相关性</strong>（遗传变异、种群生态多样性、共生/排他关系）</li>
+      <li style="margin-bottom:6px;">物种的<strong>前世今生</strong>——何时开始记载？何时不再记载？为什么？</li>
+    </ul>
+    <p style="margin-top:12px; font-size:0.9rem; color:var(--muted);">
+      2020 年乌镇发布<strong>世界首个物产大模型</strong>。另有独特的物产编码体系，希望将来能与基因编码对应。
+    </p>
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 6 ═══════════ -->
+<section id="s6">
+  <span class="section-badge">PART 6</span>
+  <h2><span class="emoji">🏛️</span> 学科现状与教育</h2>
+
+  <div class="card accent-red">
+    <h3>学科归属：「战国时期」</h3>
+    <p>数字人文目前处于<strong>各个学科纷纷发力争取学术话语权</strong>的阶段，呈现出<strong>多元交叉</strong>的特性。历史、艺术、文学、哲学、语言、图形学、计算机、数字出版和传播等都在参与。</p>
+  </div>
+
+  <table class="info-table">
+    <thead>
+      <tr><th>维度</th><th>现状</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>本科学位</td>
+        <td>放在<strong>文学学位</strong>下（因为第一家申报在文学院）</td>
+      </tr>
+      <tr>
+        <td>研究生学位</td>
+        <td>分散在<strong>理学</strong>等多门类，五花八门</td>
+      </tr>
+      <tr>
+        <td>课程体系</td>
+        <td><strong>尚无共识</strong>。「1/3 人文 + 1/3 技术 + 1/3 交叉」？被评价为「可能太简单了」——核心课程到底是哪些，大家还没有形成共识</td>
+      </tr>
+      <tr>
+        <td>完整建制</td>
+        <td>中国人民大学拥有<strong>从本科到博士后的完整数字人文教育体系</strong>，但很多内容一般院校难以复制</td>
+      </tr>
+      <tr>
+        <td>国家层面</td>
+        <td>不同部门出台的政策之间<strong>尚不能相互解释、相互衔接</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card accent-teal">
+    <h3>好消息</h3>
+    <ul style="padding-left:20px;">
+      <li style="margin-bottom:8px;">国家基金今年在<strong>信息资源管理、文献学</strong>中<strong>新增数字人文研究方向</strong></li>
+      <li style="margin-bottom:8px;">国务院学科办拟将「科技遗产与数字人文」设为<strong>科学技术史一级学科下的二级学科</strong></li>
+      <li style="margin-bottom:8px;">各学校根据自身背景特色发展，人才培养正在分层</li>
+    </ul>
+  </div>
+
+  <div class="highlight">
+    <strong>「人文学者要主动往前跨越一步。」</strong><br>
+    演讲者分享了他看到的趋势：两个 985 高校文学院院长，一个在做智能体开发，一个在养龙虾做实证研究，讲得头头是道。「如果搞人文的人很好地掌握了技术，那我们这些专门从事技术的人员，就要把自己练得更强。倒逼我们。」
+  </div>
+</section>
+
+<div class="divider">· · ·</div>
+
+<!-- ═══════════ SECTION 7 ═══════════ -->
+<section id="s7">
+  <span class="section-badge">PART 7</span>
+  <h2><span class="emoji">✨</span> 总结与金句</h2>
+
+  <div class="card">
+    <h3>贯穿全场的三条主线</h3>
+    <ol style="padding-left:20px;">
+      <li style="margin-bottom:12px;"><strong>问题意识先行。</strong>不能为了做研究而做研究。领域需求在哪、科学问题在哪，这是数字人文研究的起点。</li>
+      <li style="margin-bottom:12px;"><strong>技术与人文的双向奔赴。</strong>技术人深入人文，人文人掌握技术——不能是单方面的。</li>
+      <li style="margin-bottom:12px;"><strong>可重复验证是新标准。</strong>开放数据、可复现的实验设计，这是数字人文区别于传统人文的根本特征。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>演讲中的关键金句</h3>
+    <blockquote>
+      「用数字技术解决人文问题，以人文的方式发展数字技术。」
+    </blockquote>
+    <blockquote>
+      「一方水土生一方物产，一方物产养一方人。」
+    </blockquote>
+    <blockquote>
+      「没有事实，只有视角。」
+      <span class="author">—— 尼采</span>
+    </blockquote>
+    <blockquote>
+      「思想和科学的进步是由新范式代替旧范式所构成的。」
+      <span class="author">—— 托马斯·库恩</span>
+    </blockquote>
+    <blockquote>
+      「阳给了我们力量，阴提供了意义和伦理的判断。」
+      <span class="author">—— 《未来简史》</span>
+    </blockquote>
+    <blockquote>
+      「在文本资料从记载转化为数据并进一步成为知识的过程中，那些记载信息文字背后曾存在怎样的含义？它们如何合理产生、如何流传、以何种方式被解读和使用？这些都是数字人文学界必须时刻追问的问题。」
+    </blockquote>
+  </div>
+
+  <div class="summary-banner">
+    <h2>🎯 记住这五点，数字人文没那么深奥</h2>
+    <div class="summary-flow">
+      <span>问题导向</span>
+      <span class="arrow">→</span>
+      <span>数学处理</span>
+      <span class="arrow">→</span>
+      <span>适配技术选用</span>
+      <span class="arrow">→</span>
+      <span>可重复实验设计</span>
+      <span class="arrow">→</span>
+      <span>问题解读</span>
+    </div>
+    <p style="margin-top:20px; opacity:0.8; font-size:0.9rem;">
+      —— 这五个短语是演讲者给出的最简练版本，适用于任何数字人文研究项目
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>📝 本笔记根据数字人文论坛主旨演讲录音整理 · 仅供学习参考</p>
+  <p style="margin-top:4px;">基于《数字人文的界定与实践》主题演讲</p>
+</footer>
+
+<script>
+// Sticky nav highlight
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+</body>
+</html>
