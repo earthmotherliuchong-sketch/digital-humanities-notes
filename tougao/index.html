@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投稿指南与出版规范 · 编辑分享纪要</title>
+<meta name="description" content="整理自出版社编辑关于英文学术期刊投稿的讲座录音：投稿流程快问快答、如何判断期刊是否适合、图片与参考文献规范、作者署名、修回稿与回复审稿人、Knowledge Organization 期刊专题及掠夺性期刊防范。">
+
+<!-- Open Graph / 微信分享卡片预览 -->
+<meta property="og:title" content="投稿指南与出版规范 · 编辑分享纪要">
+<meta property="og:description" content="出版社编辑讲座整理：投稿快问快答、期刊是否适合你、图片与版权、参考文献、作者署名、回复审稿人、Knowledge Organization 期刊专题、警惕掠夺性期刊。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/tougao/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://earthmotherliuchong-sketch.github.io/digital-humanities-notes/tougao/">
+<style>
+  :root{
+    --bg:#faf6ef;
+    --panel:#fffdf9;
+    --ink:#3a2e25;
+    --ink-soft:#6b5b4d;
+    --accent:#c2632f;
+    --accent-soft:#f2e3d4;
+    --line:#e8ddcd;
+    --ok:#5a7d52;
+    --warn:#b07a2a;
+    --bad:#a8432e;
+    --shadow:0 4px 18px rgba(120,90,60,.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Serif SC","Songti SC","STSong",Georgia,serif;
+    line-height:1.85;font-size:16.5px;
+  }
+  header.hero{
+    background:linear-gradient(135deg,#f6e7d4,#f3d8bf);
+    padding:46px 24px 38px;border-bottom:3px solid var(--accent);
+  }
+  .hero-inner{max-width:920px;margin:0 auto;}
+  .hero h1{margin:0 0 8px;font-size:30px;letter-spacing:1px;color:#4a382c;}
+  .hero .sub{font-size:15px;color:var(--ink-soft);margin:0 0 14px;}
+  .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .tag{background:#fff;border:1px solid var(--line);color:var(--accent);
+    padding:3px 12px;border-radius:999px;font-size:13px;}
+  .layout{max-width:1100px;margin:0 auto;display:flex;gap:28px;padding:0 20px;}
+  nav.toc{
+    position:sticky;top:18px;align-self:flex-start;flex:0 0 218px;
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:16px 14px;box-shadow:var(--shadow);height:max-content;max-height:92vh;overflow:auto;
+  }
+  nav.toc h4{margin:0 0 10px;font-size:14px;color:var(--accent);letter-spacing:1px;}
+  nav.toc a{display:block;color:var(--ink-soft);text-decoration:none;padding:6px 10px;
+    border-radius:8px;font-size:14px;border-left:3px solid transparent;}
+  nav.toc a:hover{background:var(--accent-soft);color:var(--ink);}
+  nav.toc a.active{background:var(--accent-soft);border-left-color:var(--accent);color:var(--ink);font-weight:600;}
+  main{flex:1;min-width:0;padding:26px 0 60px;}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:26px 30px;margin-bottom:22px;box-shadow:var(--shadow);scroll-margin-top:18px;}
+  section h2{margin:0 0 4px;font-size:22px;color:#4a382c;border-bottom:2px solid var(--accent-soft);
+    padding-bottom:10px;}
+  section h2 .num{color:var(--accent);font-size:18px;margin-right:8px;}
+  section h3{font-size:17px;color:var(--accent);margin:22px 0 6px;}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:22px;}
+  li{margin:6px 0;}
+  .lead{color:var(--ink-soft);font-size:15px;margin-top:6px;}
+  .callout{border-left:4px solid var(--accent);background:var(--accent-soft);
+    padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0;font-size:15px;}
+  .callout.ok{border-color:var(--ok);background:#eef3ea;}
+  .callout.warn{border-color:var(--warn);background:#fbf2dd;}
+  .callout.bad{border-color:var(--bad);background:#f7e9e4;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr;}.layout{flex-direction:column;}
+    nav.toc{position:static;flex:none;width:100%;max-height:none;}}
+  .pill{display:inline-block;background:var(--accent-soft);color:var(--accent);
+    border-radius:6px;padding:1px 8px;font-size:13px;margin:0 2px;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--accent-soft);color:#4a382c;}
+  footer{max-width:920px;margin:0 auto;padding:24px 20px 60px;color:var(--ink-soft);font-size:13.5px;}
+  .footer-note{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:16px 20px;}
+  a.ref{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>投稿指南与出版规范</h1>
+    <p class="sub">整理自出版社责任编辑讲座录音 · 面向英文学术期刊投稿作者</p>
+    <div class="tags">
+      <span class="tag">投稿流程</span>
+      <span class="tag">期刊匹配</span>
+      <span class="tag">图片与版权</span>
+      <span class="tag">参考文献</span>
+      <span class="tag">作者署名</span>
+      <span class="tag">回复审稿人</span>
+      <span class="tag">Knowledge Organization</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc">
+    <h4>目录</h4>
+    <a href="#overview">开场 · 编辑视角</a>
+    <a href="#faq">一、投稿快问快答</a>
+    <a href="#fit">二、如何判断期刊是否合适</a>
+    <a href="#figure">三、图片规范与版权</a>
+    <a href="#ref">四、参考文献规范</a>
+    <a href="#author">五、作者署名规范</a>
+    <a href="#revision">六、修回稿与回复审稿人</a>
+    <a href="#ko">七、Knowledge Organization 专题</a>
+    <a href="#predatory">八、警惕掠夺性期刊</a>
+    <a href="#ending">结语与资源</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>开场 · 编辑视角</h2>
+      <p class="lead">讲座由出版社责任编辑主讲，面向高校师生，核心意思是：<strong>把研究做好 ≠ 一定能发表</strong>。审稿人不仅看研究价值，也看写作水平、逻辑清晰度与是否符合出版规范。</p>
+      <div class="callout">
+        编辑原话："你的研究做得怎么样，在研究结束时就定性了；但审稿人看的，是你有没有用清晰的语言、清晰的逻辑，把贴合期刊方向的东西阐述出来。"论文是<strong>写作成果</strong>，不只是实验图的堆砌。
+      </div>
+      <p>本次分享分两条线：① 普适性的英文期刊投稿注意事项；② 以出版社旗下 <span class="pill">Knowledge Organization</span>（知识组织，SSCI）期刊为例的具体说明。</p>
+    </section>
+
+    <section id="faq">
+      <h2><span class="num">一</span>投稿快问快答（FAQ）</h2>
+      <p class="lead">编辑汇总了公众号、小红书、邮件里作者最常问的问题。</p>
+
+      <h3>① "Under Review" 是什么意思？要等多久？</h3>
+      <p>说明稿件已进入<strong>同行评审</strong>阶段。同行评审一般 3–4 周（约一个月）都是合理时长。出版社通常要求一轮送审在 3 周到 1 个月内完成。</p>
+
+      <h3>② 能不能催编辑？</h3>
+      <p>可以催，但<strong>不要隔两天就催</strong>。刚进 review 第 3 天就问"收到报告了吗"，会给编辑留下不好的印象——但不至于因此拒稿。建议：到 3 周或快 1 个月时，做一次<strong>合理询问进度</strong>即可。</p>
+
+      <h3>③ "Final Decision Now" 但还没收到邮件？</h3>
+      <p>这表示评审环节已结束，编辑正在整合整体意见（如出版格式、参考文献等问题），统一梳理后给出决定。这一步比较快，但也可能直接给出拒稿决定。</p>
+
+      <h3>④ 不同意审稿人意见 / 被拒了怎么办？</h3>
+      <div class="callout warn">
+        作者有一次<strong>申诉（appeal）权利</strong>。若你认为审稿人意见不合理（与你的研究理念不符等），可以申诉——<strong>有且仅有一次机会</strong>。申诉成功有先例；若主编驳回则不可再申诉，但不影响你修改后重新投稿。
+      </div>
+    </section>
+
+    <section id="fit">
+      <h2><span class="num">二</span>如何判断期刊是否适合你</h2>
+      <p class="lead">大量稿件在<strong>初审阶段就被拒</strong>，原因是"完全不在收稿范围"。投稿前务必先确认以下两点，避免白费功夫。</p>
+
+      <h3>1. 确认"人家到底要不要你"</h3>
+      <ul>
+        <li><strong>读 Aims &amp; Scope / Author Instructions</strong>：每个期刊都有给作者的说明栏目。内容多可借助 AI 工具提炼、匹配是否适合。</li>
+        <li><strong>看收稿类型</strong>：有的刊只收综述、有的不收综述，注意区分。</li>
+        <li><strong>读近期文章</strong>：若一两年内从未发过你这个主题，或明显不倾向该方向，投上去也悬。</li>
+        <li><strong>看编委构成</strong>：若整个编委列表里没有与你研究近似的人，稿件投上去可能无人能审核——这是难点。</li>
+      </ul>
+
+      <h3>2. 常规信息怎么确认（影响因子 / 审稿周期 / 处理费）</h3>
+      <table>
+        <tr><th>信息</th><th>确认方式</th><th>提醒</th></tr>
+        <tr><td>影响因子</td><td>期刊官网（最新）；Web of Science 等数据库</td><td>第三方小程序可能信息滞后</td></tr>
+        <tr><td>审稿周期</td><td>看文章标题下标注的投稿→返修→接收→出版时间</td><td>若平均周期远超你的 deadline（如一年以上），不要考虑</td></tr>
+        <tr><td>文章处理费 APC</td><td>官网 OPEN 获取版面说明</td><td>结合报销额度 / 研究经费承担能力</td></tr>
+      </table>
+      <div class="callout ok">
+        拿不准就<strong>直接联系编辑部</strong>，用正常询问语气说清自己的问题即可。编辑不会因为你来问就觉得"这人麻烦"而拒稿。
+      </div>
+    </section>
+
+    <section id="figure">
+      <h2><span class="num">三</span>图片规范与版权</h2>
+      <p class="lead">图片质量是大刊（尤其高分刊）越来越看重的点——出版本质是<strong>学术传播</strong>，要让更多人看懂。</p>
+
+      <h3>① 提交规范</h3>
+      <ul>
+        <li>不要<strong>把所有图插进 Word</strong> 一起交——会严重影响清晰度，影响可读性。</li>
+        <li>应插正文 + <strong>原图单独打包上传</strong>，给编辑提供高清晰度版本。</li>
+      </ul>
+
+      <h3>② 引用他人图片的版权</h3>
+      <div class="callout warn">
+        你看到的图 ≠ 都能直接拿来用。用了他人已发表图片必须：① 合理引用；② 说明<strong>已获得许可</strong>（谁出版的哪篇文章、获准使用/微调/重组）。版权归属通常在摘要上方或 PDF 最下方标注。
+      </div>
+      <ul>
+        <li><strong>开源（如 CC BY 4.0）</strong>：合理引用即可使用。</li>
+        <li><strong>非商用 / 禁用</strong>：部分需书面申请购买，规定各不相同。</li>
+        <li><strong>订阅型期刊</strong>：版权归出版社，需写信申请并说明用途（商业/非商业/文章发表），获批后转交当前投稿编辑。</li>
+        <li><strong>版权在作者</strong>：需写信给原作者申请。</li>
+      </ul>
+
+      <h3>③ 软件 / 平台生成的图标</h3>
+      <p>自己"画的"图若用了第三方网站/库的图标，也要遵守该网站的声明，否则可能导致文章无法发表。</p>
+
+      <h3>④ AI 生成图片政策</h3>
+      <div class="callout bad">
+        各家出版社对 AI 图片要求<strong>差异极大</strong>，且正文图、概念图、实验图、Graphical Abstract 位置区分对待。该出版社（I+）目前<strong>不允许在正文图片中使用任何 AI</strong>（含 Graphical Abstract）。政策随时可能变动，投稿前务必再查。
+      </div>
+    </section>
+
+    <section id="ref">
+      <h2><span class="num">四</span>参考文献规范</h2>
+      <p class="lead">参考文献是出版社<strong>严格审查</strong>的部分——它是你研究的基石，引用混乱/错误会让审稿人怀疑整篇文章是乱写的。</p>
+
+      <div class="grid2">
+        <div class="callout bad">
+          <strong>错引</strong>：引用成果与这段话完全无关（A 文献内容写成 B），主题都不一致，必被质疑。
+        </div>
+        <div class="callout bad">
+          <strong>漏引</strong>：文中出现"某某研究表示/指南表示"等字眼，必须有对应文献支撑，否则逻辑无依据。
+        </div>
+        <div class="callout bad">
+          <strong>撤稿文章</strong>：若核心结论依据的文章已被撤稿（虚假同行评审/数据问题），审稿人会怀疑你的文章。撤稿每天都在发生，<strong>作者需自行关注</strong>。
+        </div>
+        <div class="callout bad">
+          <strong>AI 生成虚假文献</strong>：AI 可能编造看似合理的虚假参考文献（DOI 都对，但文章不存在）。编辑会逐条核查。
+        </div>
+      </div>
+
+      <h3>引用格式</h3>
+      <p>用错引文格式投稿，编辑无法处理只能打回重改——调格式很耗时。作者需自行按目标期刊要求调整（可能在同行评审后由编辑给 comment 要求修改）。</p>
+      <div class="callout ok">
+        出版社已用 AI 做出小工具：一键导入文章即可生成报告，提示"54 篇文献中有 7 篇已被撤稿"并定位位置。有需要可联系试用。
+      </div>
+    </section>
+
+    <section id="author">
+      <h2><span class="num">五</span>作者署名规范</h2>
+      <p class="lead">什么样的人能被列为作者，国际出版组织有<strong>明确规范</strong>。不满足会被编辑提出，虽不构成拒稿，但会增加沟通成本与质量疑虑。</p>
+
+      <h3>四条标准（ICMJE 原则）</h3>
+      <p>必须<strong>同时满足</strong>以下四条，才能列为作者：</p>
+      <ol>
+        <li>对研究的<strong>构思与设计</strong>作出重要贡献（如假设设计、数据分析）；</li>
+        <li>对文章的<strong>起草或重要修改</strong>作出贡献；</li>
+        <li><strong>同意</strong>最终发表版本；</li>
+        <li>愿意对发表内容<strong>负责</strong>。</li>
+      </ol>
+      <p>其中 3、4 可统一声明"全体作者同意并负责"；1、2 是作者常搞混的地方。</p>
+
+      <h3>CREDIT 标准与贡献分类</h3>
+      <ul>
+        <li>使用 <span class="pill">CRedit</span> 标准匹配：谁提出概念、谁管数据、谁做形式分析等。</li>
+        <li>仅提供<strong>资金、试剂、软件、项目协调、流程监督</strong>等，属于"贡献"但不属于上述 1、2 类——<strong>不应列为作者</strong>，可写入<strong>致谢</strong>。</li>
+      </ul>
+
+      <h3>特殊情形</h3>
+      <ul>
+        <li><strong>逝者</strong>：无法确认符合 1–4 条时，需一致同意处理。</li>
+        <li><strong>AI</strong>：<strong>不能列为作者</strong>（无法负责、无法同意），但<strong>使用了 AI 必须声明</strong>（在文中说明用于写作等）。</li>
+      </ul>
+
+      <h3>修回稿勿私自删作者</h3>
+      <div class="callout bad">
+        曾出现：作者交修订稿时偷偷删掉一位作者，该作者不知情；临发表时才发现，导致无法发表且涉及<strong>学术不端</strong>。加/删作者须<strong>合理说明原因 + 全体作者签名同意</strong>，填表反馈编辑部（authorship 轻送表可向编辑部索取）。
+      </div>
+    </section>
+
+    <section id="revision">
+      <h2><span class="num">六</span>修回稿与回复审稿人</h2>
+      <p class="lead">进入同行评审已不易，但不少稿子"修回后被拒"（一轮给修、二轮给拒）。</p>
+
+      <h3>为什么修回后被拒？</h3>
+      <ul>
+        <li><strong>根本：没修到点、没修到位</strong>——未达到期刊标准；</li>
+        <li><strong>大半原因：回应态度</strong>——让审稿人觉得不被尊重、作者不想发表。</li>
+      </ul>
+
+      <h3>不规范回复的三类问题</h3>
+      <ol>
+        <li>只写"已修改"却无任何讨论——本是交流环节，显得敷衍；</li>
+        <li>说改了，但原文<strong>找不到改在哪</strong>，也不标注位置；</li>
+        <li>写"改在第 5 行"其实第 15 行才改——耗时来回。</li>
+      </ol>
+
+      <h3>良好回复范例</h3>
+      <div class="callout ok">
+        逐位审稿人（一审、二审、三审）逐条回应；标注具体行号（如"578–584 行已高亮批注并修改"）。整体可读性极强，审稿人感到被尊重。
+      </div>
+
+      <h3>如何有理有据地"不听"审稿人</h3>
+      <p>若意见难以达成，可清晰陈述：这是下一步计划 / 本文做到此处即可得出新点。只要<strong>清晰说明</strong>，审稿人通常可接受，并非"提 A 就必须做到 A"。</p>
+      <div class="callout warn">
+        若修改量极大、周期会拖很长，编辑可能直接<strong>拒稿重投</strong>（让你补齐后再投）。两到三位审稿人意见汇总后，若整体偏负面/修改量过大，主编/编委也会据此拒稿。
+      </div>
+    </section>
+
+    <section id="ko">
+      <h2><span class="num">七</span>Knowledge Organization 期刊专题</h2>
+      <p class="lead">以该社旗下 SSCI 期刊 <span class="pill">Knowledge Organization</span>（知识组织）为例。</p>
+
+      <h3>期刊简介</h3>
+      <table>
+        <tr><th>项</th><th>说明</th></tr>
+        <tr><td>创刊</td><td>1973 年；国际知识组织协会（ISKO）会刊</td></tr>
+        <tr><td>收录</td><td>SSCI；2025 年起由该社（I+ / m plus）出版</td></tr>
+        <tr><td>出版</td><td>开放获取（CC BY）、双盲评审、双月刊</td></tr>
+        <tr><td>发文量</td><td>每期约 5 篇，体量不大</td></tr>
+        <tr><td>速度</td><td>首次决定约 6 天内（初审不符会很快拒）；2025 平均评审周期约 45 天</td></tr>
+        <tr><td>主编 / 编委</td><td>主编来自巴西；41 位编委中约 10% 为中国（含武汉大学安璐教授任副主编）；国内与内蒙古师范大学科学技术史研究院合作主办</td></tr>
+        <tr><td>友好度</td><td>国内投稿占比最高，对外文期刊而言对国人较友好</td></tr>
+      </table>
+
+      <h3>收稿范围（三点）</h3>
+      <ol>
+        <li><strong>知识组织基础理论研究</strong>（图书馆学与情报科学领域）；</li>
+        <li><strong>知识组织与技术</strong>：技术方法、知识组织系统设计；</li>
+        <li><strong>跨领域应用</strong>：科研、文化遗产、医疗健康等中的知识组织实践（含数字人文方向）。</li>
+      </ol>
+
+      <h3>自测：你的文章能投这里吗？</h3>
+      <ul>
+        <li>创新点服务于<strong>知识组织本身</strong>，才算在范围内；</li>
+        <li>把涉及"knowledge organization"的段落全部删掉，若文章仍完整——说明你只是"提及"，<strong>不能投</strong>；</li>
+        <li>参考该刊已发论文（含文学、历史、数字人文方向）的写作与构思方式去模仿。</li>
+      </ul>
+
+      <h3>特刊（Virtual Special Issue）</h3>
+      <ul>
+        <li><strong>AI 与知识组织/管理</strong>：新理念、新方法，限制较少（某特刊约 8 月底截稿）；</li>
+        <li><strong>组织与档案管理中的伦理/技术性</strong>：新技术/政策/社会环境下，图书馆员、档案馆员、信息科学家在负责任记录保存中的角色（截稿至明年）。</li>
+      </ul>
+      <div class="callout">
+        另有一个亚太信息会议延伸特刊，由国内客座编辑（中国人民大学信息资源管理学院两位 + 一位国外学者）主持，欢迎关注。编辑部也可在投稿前帮看稿，判断能否过主编初审，节省作者时间。
+      </div>
+    </section>
+
+    <section id="predatory">
+      <h2><span class="num">八</span>警惕掠夺性期刊</h2>
+      <p class="lead">确实存在虚假/掠夺性期刊与出版社，投后不处理、撤稿不回应、失联，导致一稿多投风险。</p>
+      <div class="callout warn">
+        推荐网站：<strong>Think. Check. Submit.</strong>（thinkchecksubmit.org）提供 check list，通过一系列问题帮你评估某期刊"被掠夺/欺诈"的可能性有多大。接触新刊时务必逐一核对。
+      </div>
+    </section>
+
+    <section id="ending">
+      <h2>结语与资源</h2>
+      <ul>
+        <li><strong>写作资源</strong>：出版社官网英文，视频号有<strong>中文版</strong>免费课程（如何写好方法、Introduction、讨论，规避写作风险），由国际出版组织成员主讲，带中文字幕。</li>
+        <li><strong>青年编委 / 审稿人招募</strong>：获博士学位数年、持续相关工作者可申请青年编委；愿做学术交流、读知识组织领域文章的学者可申请审稿人。</li>
+        <li><strong>反哺支持</strong>：开源期刊支持学者所在院校讲座、会议报告等线下交流，可联系编辑部。</li>
+        <li><strong>联系</strong>：讲座末尾附有工作人员微信，稿件咨询、产品/活动交流均可添加。</li>
+      </ul>
+      <div class="callout">
+        一句话收尾：投稿不仅是"把文章写好"，更是让它在<strong>符合国际出版规范的框架内</strong>成为可传播的学术成果。
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="footer-note">
+    <p><strong>说明</strong>：本文档由出版社编辑讲座<strong>录音转写</strong>整理而成，仅供学习参考。其中涉及的具体周期、费用、政策（尤其 AI 图片、申诉次数等）以各期刊官网最新 Author Instructions 及编辑部实际通知为准。整理时间：2026-08。</p>
+  </div>
+</footer>
+
+<script>
+  // 滚动高亮目录
+  const links = [...document.querySelectorAll('nav.toc a')];
+  const map = {};
+  links.forEach(a=>{const id=a.getAttribute('href').slice(1);const s=document.getElementById(id);if(s)map[id]=a;});
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const a=map[e.target.id]; if(a)a.classList.add('active');
+      }
+    });
+  },{rootMargin:'-20% 0px -70% 0px'});
+  Object.keys(map).forEach(id=>obs.observe(document.getElementById(id)));
+</script>
+</body>
+</html>
